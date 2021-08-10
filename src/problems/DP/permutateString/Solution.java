@@ -11,8 +11,8 @@ public class Solution {
         List< String > storage = new ArrayList<>();
         StringBuilder str = new StringBuilder( inputStr );
         HashSet< String > hset = new HashSet<>();
-        permutationNoDuplicates( storage , str , new StringBuilder() ,
-                hset );
+//        permutationNoDuplicates( storage , str , new StringBuilder() ,
+//                hset );
         
         permutate( storage , str , new StringBuilder() );
         System.out.println( hset );
@@ -47,8 +47,8 @@ public class Solution {
     
     // this method will handle the duplication in the string. Will work on this later.
     private static void permutationNoDuplicates( List< String > storage ,
-                                                 StringBuilder str
-            , StringBuilder stack , HashSet< String > hset ) {
+                                                 StringBuilder str, StringBuilder stack ,
+                                                 HashSet< String > hset ) {
         
         if ( str.length() == 0 ) {
             hset.add( stack.toString() );
