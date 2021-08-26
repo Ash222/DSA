@@ -10,33 +10,33 @@ public class Solution {
         public int val;
         public List<Node> children;
         
-        public Node() {}
+        public Node() {
+        }
         
-        public Node(int _val) {
+        public Node( int _val ) {
             val = _val;
         }
         
-        public Node(int _val, List<Node> _children) {
+        public Node( int _val , List<Node> _children ) {
             val = _val;
             children = _children;
         }
     }
     
-    private List<Integer> postorder(Node root){
-        LinkedList<Integer> result=new LinkedList<>();
-        LinkedList<Node> stack=new LinkedList<>();
+    private List<Integer> postorder( Node root ) {
+        LinkedList<Integer> result = new LinkedList<>();
+        LinkedList<Node> stack = new LinkedList<>();
         
-        if(root==null)
-            return result;
+        if( root == null ) return result;
         
-        stack.add(root);
-        while(!stack.isEmpty()){
+        stack.add( root );
+        while ( !stack.isEmpty() ) {
             
-            Node node=stack.pollLast();
-            result.addFirst(node.val);
+            Node node = stack.pollLast();
+            result.addFirst( node.val );
             
-            for(int i=0;i<node.children.size();i++){
-                stack.add( node.children.get(i) );
+            for ( int i = 0 ; i < node.children.size() ; i++ ) {
+                stack.add( node.children.get( i ) );
             }
             
         }
